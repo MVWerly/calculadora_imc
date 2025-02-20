@@ -1,0 +1,9 @@
+.title,
+.description {
+    color: var(--textColor);
+}
+
+.description {
+    padding: 8px;
+    text-align: justify;
+}

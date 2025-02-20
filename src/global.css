@@ -2,4 +2,33 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-image: url(./assets/img/background_img.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    padding: 20px;
+    margin: 50px auto;
+    max-width: 768px;
+    background-color: var(--containerColor);
+    border-radius: 20px;
+}
+
+:root {
+    --containerColor: #aec2d6d3; 
+    --textColor: #000000;
+    --buttonBG: #07db39;
+    --buttonBGHover: #09FD0B;
+    --textSecondary: #fff;
+    --tableHeadBG: #707D8A;
+    /* rows Table Data*/
+    --rowRed: red;
+    --rowOrange: orange;
+    --rowYellow: yellow;
+    --rowGreen: green;
 }

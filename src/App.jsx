@@ -1,12 +1,19 @@
-import { useState } from 'react'
+import { use, useState } from 'react'
+import Title from './components/Title'
+import Form from './components/Form'
+import Result from './components/Result';
 
 
 
 function App() {
+  const [imc, setImc] = useState(null);
+
   return (
-    <>
-    <h1>Olá mundo</h1>
-    </>
+    <div className="container">
+      <Title/>
+      <Form setImc={setImc}/>
+      <Result imc={imc}/>
+    </div>
   )
 }
 
