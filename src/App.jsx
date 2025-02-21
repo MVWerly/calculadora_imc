@@ -2,6 +2,7 @@ import { use, useState } from 'react'
 import Title from './components/Title'
 import Form from './components/Form'
 import Result from './components/Result';
+import Footer from './components/Footer';
 
 
 
@@ -13,6 +14,7 @@ function App() {
       <Title/>
       <Form setImc={setImc}/>
       <Result imc={imc}/>
+      <Footer/>
     </div>
   )
 }

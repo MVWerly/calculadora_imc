@@ -1,0 +1,18 @@
+.footerContainer {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.linkItem {
+    text-decoration: none;
+}
+
+.iconItem {
+    font-size: 30px;
+    color: var(--textColor);
+}
+
+.description {
+    margin-top: 5px;
+}
