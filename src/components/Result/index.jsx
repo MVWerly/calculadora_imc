@@ -60,7 +60,7 @@ const Result = ({ imc }) => {
                             Seu IMC é: <span className={getRowAndSpanColor(imc)}>{imc}</span>
                         </h3>
                     )}
-                    <img className={styles.imgResult} src="src/assets/img/planilha_img.png" alt="#" />
+                    <img className={styles.imgResult} src="src/assets/img/planilha_img.jpg" alt="#" />
                 </div>
                 <table className={styles.tableResult}>
                     <thead>
