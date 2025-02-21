@@ -1,7 +1,7 @@
 .title {
     width: 100%;
     text-align: center;
-    margin: 10px auto;
+    margin: 20px auto;
     padding: 8px;
     border-radius: 10px;
     background-color: var(--tableHeadBG);
@@ -74,4 +74,31 @@
 .rowGreen{
     background-color: var(--rowGreen);
     color: var(--textSecondary);
+}
+
+@media (max-width: 768px) {
+    .resultContainer {
+        display: block;
+        width: 100%;
+    }
+
+    .imgResult {
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 425px) {
+    .resultContainer {
+        display: block;
+    }
+
+    .imgResult {
+        width: 60px;
+        margin: 30px auto;
+    }
+
+    .tableResult {
+        font-size: 14px;
+        width: 100%;
+    }
 }

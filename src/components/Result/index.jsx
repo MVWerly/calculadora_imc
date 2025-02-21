@@ -6,61 +6,45 @@ const Result = ({ imc }) => {
             col1: 'Menor que 18,5',
             col2: 'Magreza',
             col3: 'O',
-            ref: 18.5,
+            id: 1,
         },
         {
             col1: 'Entre 18,5 e 24,9',
             col2: 'Normal',
             col3: 'O',
-            ref: 24.9,
+            id: 2,
         },
         {
             col1: 'Entre 25,0 e 29,9',
             col2: 'Sobrepeso',
             col3: 'I',
-            ref: 29.9,
+            id: 3,
         },
         {
             col1: 'Entre 30,0 e 39,9',
             col2: 'Obesidade',
             col3: 'II',
-            ref: 39.9,
+            id: 4,
         },
         {
             col1: 'Maior que 40,0',
             col2: 'Obesidade grave',
             col3: 'III',
-            ref: 40,
+            id: 5,
         },
     ];
 
-    // const setSpanColor = (imc) => {
-    //     if (imc > 0 && imc < 18.5) {
-    //         return ;
-    //     } else if (imc >= 18.5 && imc < 24.9) {
-    //         return styles.resultGreen;
-    //     } else if (imc >= 25.0 && imc < 29.9) {
-    //         return styles.resultYellow;
-    //     } else if (imc >= 30.0 && imc < 39.9) {
-    //         return styles.resultOrange;
-    //     } else if (imc >= 40) {
-    //         return styles.resultRed;
-    //     } else {
-    //         return '';
-    //     }
-    // }
-
-    const getRowAndSpanColor = (imc, ref) => {
+    const getRowAndSpanColor = (imc, id) => {
         if (imc > 0 && imc < 18.5) {
-            return ref ? (ref === 18.5 ? styles.rowYellow : '') : styles.resultYellow;
+            return id ? (id === 1 ? styles.rowYellow : '') : styles.resultYellow;
         } else if (imc >= 18.5 && imc < 24.9) {
-            return ref ? (ref === 24.9 ? styles.rowGreen : '') : styles.resultGreen;
+            return id ? (id === 2 ? styles.rowGreen : '') : styles.resultGreen;
         } else if (imc >= 25.0 && imc < 29.9) {
-            return ref ? (ref === 29.9 ? styles.rowYellow : '') : styles.resultYellow;
+            return id ? (id === 3 ? styles.rowYellow : '') : styles.resultYellow;
         } else if (imc >= 30.0 && imc < 39.9) {
-            return ref ? (ref === 39.9 ? styles.rowOrange : '') : styles.resultOrange;
+            return id ? (id === 4 ? styles.rowOrange : '') : styles.resultOrange;
         } else if (imc >= 40) {
-            return ref ? (ref === 40 ? styles.rowRed : '') : styles.resultRed;
+            return id ? (id === 5 ? styles.rowRed : '') : styles.resultRed;
         } else {
             return '';
         }
@@ -88,7 +72,7 @@ const Result = ({ imc }) => {
                     </thead>
                     <tbody>
                         {tableData.map((item, index) => (
-                            <tr key={index} className={getRowAndSpanColor(imc, item.ref)}>
+                            <tr key={index} className={getRowAndSpanColor(imc, item.id)}>
                                 <td className={styles.tableData}>{item.col1}</td>
                                 <td className={styles.tableData}>{item.col2}</td>
                                 <td className={styles.tableData}>{item.col3}</td>
